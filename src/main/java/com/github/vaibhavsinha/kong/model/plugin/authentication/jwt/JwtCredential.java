@@ -1,6 +1,7 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.jwt;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,18 +12,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class JwtCredential {
 
-    @SerializedName("rsa_public_key")
+    @JsonProperty("rsa_public_key")
     private String rsaPublicKey;
-    @SerializedName("consumer_id")
+    @JsonProperty("consumer_id")
     private String consumerId;
-    @SerializedName("id")
+    @JsonProperty("id")
     private String id;
-    @SerializedName("created_at")
+    @JsonProperty("created_at")
     private Integer createdAt;
-    @SerializedName("key")
+    @JsonProperty("key")
     private String key;
-    @SerializedName("algorithm")
+    @JsonProperty("algorithm")
     private String algorithm;
-    @SerializedName("secret")
+    @JsonProperty("secret")
     private String secret;
 }

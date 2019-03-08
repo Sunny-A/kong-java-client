@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.oauth2;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -8,12 +8,12 @@ import lombok.Data;
  */
 @Data
 public class Refresh {
-    @SerializedName("refresh_token")
+    @JsonProperty("refresh_token")
     private String refreshToken;
-    @SerializedName("client_id")
+    @JsonProperty("client_id")
     private String clientId;
-    @SerializedName("client_secret")
+    @JsonProperty("client_secret")
     private String clientSecret;
-    @SerializedName("grant_type")
+    @JsonProperty("grant_type")
     private String grantType = "refresh_token";
 }

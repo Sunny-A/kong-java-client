@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.hmac;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -9,10 +9,10 @@ import lombok.Data;
 @Data
 public class HmacAuthConfig {
 
-    @SerializedName("hide_credentials")
+    @JsonProperty("hide_credentials")
     Boolean hideCredentials;
-    @SerializedName("anonymous")
+    @JsonProperty("anonymous")
     String anonymous;
-    @SerializedName("clock_skew")
+    @JsonProperty("clock_skew")
     Integer clockSkew;
 }

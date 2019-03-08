@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.oauth2;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
@@ -11,24 +11,24 @@ import java.util.List;
 @Data
 public class OAuth2Config {
 
-    @SerializedName("hide_credentials")
+    @JsonProperty("hide_credentials")
     Boolean hideCredentials;
-    @SerializedName("anonymous")
+    @JsonProperty("anonymous")
     String anonymous;
-    @SerializedName("scopes")
+    @JsonProperty("scopes")
     List<String> scopes;
-    @SerializedName("mandatory_scope")
+    @JsonProperty("mandatory_scope")
     Boolean mandatoryScope;
-    @SerializedName("token_expiration")
+    @JsonProperty("token_expiration")
     Integer tokenExpiration;
-    @SerializedName("enable_authorization_code")
+    @JsonProperty("enable_authorization_code")
     Boolean enableAuthorizationCode;
-    @SerializedName("enable_client_credentials")
+    @JsonProperty("enable_client_credentials")
     Boolean enableClientCredentials;
-    @SerializedName("enable_implicit_grant")
+    @JsonProperty("enable_implicit_grant")
     Boolean enableImplicitGrant;
-    @SerializedName("enable_password_grant")
+    @JsonProperty("enable_password_grant")
     Boolean enablePasswordGrant;
-    @SerializedName("accept_http_if_already_terminated")
+    @JsonProperty("accept_http_if_already_terminated")
     Boolean acceptHttpIfAlreadyTerminated;
 }

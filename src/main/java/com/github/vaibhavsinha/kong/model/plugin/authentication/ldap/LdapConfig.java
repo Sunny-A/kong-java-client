@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.ldap;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
@@ -11,26 +11,26 @@ import java.util.List;
 @Data
 public class LdapConfig {
 
-    @SerializedName("hide_credentials")
+    @JsonProperty("hide_credentials")
     Boolean hideCredentials;
-    @SerializedName("anonymous")
+    @JsonProperty("anonymous")
     String anonymous;
-    @SerializedName("ldap_host")
+    @JsonProperty("ldap_host")
     String ldapHost;
-    @SerializedName("ldap_port")
+    @JsonProperty("ldap_port")
     Integer ldapPort;
-    @SerializedName("start_tls")
+    @JsonProperty("start_tls")
     Boolean startTls;
-    @SerializedName("base_dn")
+    @JsonProperty("base_dn")
     String baseDn;
-    @SerializedName("verify_ldap_host")
+    @JsonProperty("verify_ldap_host")
     Boolean verifyLdapHost;
-    @SerializedName("attribute")
+    @JsonProperty("attribute")
     String attribute;
-    @SerializedName("cache_ttl")
+    @JsonProperty("cache_ttl")
     Integer cacheTtl;
-    @SerializedName("timeout")
+    @JsonProperty("timeout")
     Integer timeout;
-    @SerializedName("keepalive")
+    @JsonProperty("keepalive")
     Integer keepalive;
 }

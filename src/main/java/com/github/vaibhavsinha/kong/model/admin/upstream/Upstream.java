@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.admin.upstream;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
@@ -11,14 +11,14 @@ import java.util.List;
 @Data
 public class Upstream {
 
-    @SerializedName("id")
+    @JsonProperty("id")
     private String id;
-    @SerializedName("slots")
+    @JsonProperty("slots")
     private Integer slots;
-    @SerializedName("name")
+    @JsonProperty("name")
     private String name;
-    @SerializedName("orderlist")
+    @JsonProperty("orderlist")
     private List<Integer> orderList;
-    @SerializedName("created_at")
+    @JsonProperty("created_at")
     private Long createdAt;
 }

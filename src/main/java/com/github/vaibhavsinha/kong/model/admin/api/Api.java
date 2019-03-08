@@ -1,6 +1,7 @@
 package com.github.vaibhavsinha.kong.model.admin.api;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Data;
 
 import java.util.List;
@@ -10,30 +11,34 @@ import java.util.List;
  */
 @Data
 public class Api {
-    @SerializedName("created_at")
+    @JsonProperty("created_at")
     private Long createdAt;
-    @SerializedName("hosts")
+    @JsonProperty("hosts")
     private List<String> hosts = null;
-    @SerializedName("http_if_terminated")
+    @JsonProperty("http_if_terminated")
     private Boolean httpIfTerminated;
-    @SerializedName("https_only")
+    @JsonProperty("https_only")
     private Boolean httpsOnly;
-    @SerializedName("id")
+    @JsonProperty("id")
     private String id;
-    @SerializedName("name")
+    @JsonProperty("name")
     private String name;
-    @SerializedName("preserve_host")
+    @JsonProperty("preserve_host")
     private Boolean preserveHost;
-    @SerializedName("retries")
+    @JsonProperty("retries")
     private Integer retries;
-    @SerializedName("strip_uri")
+    @JsonProperty("strip_uri")
     private Boolean stripUri;
-    @SerializedName("upstream_connect_timeout")
+    @JsonProperty("upstream_connect_timeout")
     private Integer upstreamConnectTimeout;
-    @SerializedName("upstream_read_timeout")
+    @JsonProperty("upstream_read_timeout")
     private Integer upstreamReadTimeout;
-    @SerializedName("upstream_send_timeout")
+    @JsonProperty("upstream_send_timeout")
     private Integer upstreamSendTimeout;
-    @SerializedName("upstream_url")
+    @JsonProperty("upstream_url")
     private String upstreamUrl;
+    @JsonProperty("uris")
+     private Object  uris;
+    @JsonProperty("methods")
+     private Object methods;
 }

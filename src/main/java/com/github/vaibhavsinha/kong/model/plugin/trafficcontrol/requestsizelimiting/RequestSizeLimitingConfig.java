@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.trafficcontrol.requestsizelimiting;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -8,6 +8,6 @@ import lombok.Data;
  */
 @Data
 public class RequestSizeLimitingConfig {
-    @SerializedName("allowed_payload_size")
+    @JsonProperty("allowed_payload_size")
     Integer allowedPayloadSize;
 }

@@ -5,7 +5,7 @@ import com.github.vaibhavsinha.kong.exception.KongClientException;
 import com.github.vaibhavsinha.kong.internal.plugin.security.RetrofitAclService;
 import com.github.vaibhavsinha.kong.model.plugin.security.acl.Acl;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import java.io.IOException;
 
@@ -19,7 +19,7 @@ public class AclServiceImpl implements AclService {
     public AclServiceImpl(String adminUrl) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(adminUrl)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(JacksonConverterFactory.create())
                 .build();
         retrofitAclService = retrofit.create(RetrofitAclService.class);
     }

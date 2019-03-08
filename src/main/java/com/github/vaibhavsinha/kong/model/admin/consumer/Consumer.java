@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.admin.consumer;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -9,9 +9,9 @@ import lombok.Data;
 @Data
 public class Consumer {
     String id;
-    @SerializedName("custom_id")
+    @JsonProperty("custom_id")
     String customId;
-    @SerializedName("created_at")
+    @JsonProperty("created_at")
     Long createdAt;
     String username;
 }

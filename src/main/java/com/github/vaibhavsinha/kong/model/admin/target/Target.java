@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.admin.target;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -9,14 +9,14 @@ import lombok.Data;
 @Data
 public class Target {
 
-    @SerializedName("id")
+    @JsonProperty("id")
     private String id;
-    @SerializedName("target")
+    @JsonProperty("target")
     private String target;
-    @SerializedName("weight")
+    @JsonProperty("weight")
     private Long weight;
-    @SerializedName("upstream_id")
+    @JsonProperty("upstream_id")
     private String upstreamId;
-    @SerializedName("created_at")
+    @JsonProperty("created_at")
     private Long createdAt;
 }

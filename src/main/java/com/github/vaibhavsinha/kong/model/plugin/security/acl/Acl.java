@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.security.acl;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,13 +10,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Acl {
-    @SerializedName("id")
+    @JsonProperty("id")
     private String id;
-    @SerializedName("group")
+    @JsonProperty("group")
     private String group;
-    @SerializedName("consumer_id")
+    @JsonProperty("consumer_id")
     private String consumerId;
-    @SerializedName("created_at")
+    @JsonProperty("created_at")
     private Long createdAt;
 
     public Acl(String group) {

@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.basic;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -9,8 +9,8 @@ import lombok.Data;
 @Data
 public class BasicAuthConfig {
 
-    @SerializedName("hide_credentials")
+    @JsonProperty("hide_credentials")
     Boolean hideCredentials;
-    @SerializedName("anonymous")
+    @JsonProperty("anonymous")
     String anonymous;
 }

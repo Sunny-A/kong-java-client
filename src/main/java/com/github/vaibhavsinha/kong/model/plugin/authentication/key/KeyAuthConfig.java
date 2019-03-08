@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.key;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
@@ -11,12 +11,12 @@ import java.util.List;
 @Data
 public class KeyAuthConfig {
 
-    @SerializedName("hide_credentials")
+    @JsonProperty("hide_credentials")
     Boolean hideCredentials;
-    @SerializedName("anonymous")
+    @JsonProperty("anonymous")
     String anonymous;
-    @SerializedName("key_names")
+    @JsonProperty("key_names")
     List<String> keyNames;
-    @SerializedName("key_in_body")
+    @JsonProperty("key_in_body")
     Boolean keyInBody;
 }

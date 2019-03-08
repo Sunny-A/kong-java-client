@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.jwt;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
@@ -11,14 +11,14 @@ import java.util.List;
 @Data
 public class JwtConfig {
 
-    @SerializedName("key_claim_name")
+    @JsonProperty("key_claim_name")
     String keyClaimName;
-    @SerializedName("anonymous")
+    @JsonProperty("anonymous")
     String anonymous;
-    @SerializedName("claims_to_verify")
+    @JsonProperty("claims_to_verify")
     List<String> claimsToVerify;
-    @SerializedName("uri_param_names")
+    @JsonProperty("uri_param_names")
     List<String> uriParamNames;
-    @SerializedName("secret_is_base64")
+    @JsonProperty("secret_is_base64")
     Boolean secretIsBase64;
 }

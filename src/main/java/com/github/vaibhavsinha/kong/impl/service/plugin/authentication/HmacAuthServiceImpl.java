@@ -5,7 +5,7 @@ import com.github.vaibhavsinha.kong.exception.KongClientException;
 import com.github.vaibhavsinha.kong.internal.plugin.authentication.RetrofitHmacAuthService;
 import com.github.vaibhavsinha.kong.model.plugin.authentication.hmac.HmacAuthCredential;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import java.io.IOException;
 
@@ -19,7 +19,7 @@ public class HmacAuthServiceImpl implements HmacAuthService {
     public HmacAuthServiceImpl(String adminUrl) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(adminUrl)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(JacksonConverterFactory.create())
                 .build();
         retrofitHmacAuthService = retrofit.create(RetrofitHmacAuthService.class);
     }

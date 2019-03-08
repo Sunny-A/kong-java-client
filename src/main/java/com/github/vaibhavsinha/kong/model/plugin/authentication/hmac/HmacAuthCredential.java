@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.hmac;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,15 +11,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class HmacAuthCredential {
 
-    @SerializedName("id")
+    @JsonProperty("id")
     private String id;
-    @SerializedName("username")
+    @JsonProperty("username")
     private String username;
-    @SerializedName("secret")
+    @JsonProperty("secret")
     private String secret;
-    @SerializedName("consumer_id")
+    @JsonProperty("consumer_id")
     private String consumerId;
-    @SerializedName("created_at")
+    @JsonProperty("created_at")
     private Long createdAt;
 
     public HmacAuthCredential(String username, String secret) {

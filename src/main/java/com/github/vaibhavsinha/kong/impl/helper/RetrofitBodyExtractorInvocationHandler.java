@@ -20,6 +20,7 @@ public class RetrofitBodyExtractorInvocationHandler implements InvocationHandler
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         String methodName = method.getName();
+
         Class<?>[] parameterTypes = method.getParameterTypes();
         Method method1 = proxied.getClass().getMethod(methodName, parameterTypes);
         Call call = (Call) method1.invoke(proxied, args);

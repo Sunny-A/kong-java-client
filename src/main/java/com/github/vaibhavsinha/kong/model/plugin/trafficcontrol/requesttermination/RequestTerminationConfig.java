@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.trafficcontrol.requesttermination;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -8,12 +8,12 @@ import lombok.Data;
  */
 @Data
 public class RequestTerminationConfig {
-    @SerializedName("status_code")
+    @JsonProperty("status_code")
     Integer statusCode;
-    @SerializedName("message")
+    @JsonProperty("message")
     String message;
-    @SerializedName("body")
+    @JsonProperty("body")
     String body;
-    @SerializedName("content_type")
+    @JsonProperty("content_type")
     String contentType;
 }

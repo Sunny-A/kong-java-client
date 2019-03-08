@@ -5,7 +5,7 @@ import com.github.vaibhavsinha.kong.exception.KongClientException;
 import com.github.vaibhavsinha.kong.internal.plugin.authentication.RetrofitKeyAuthService;
 import com.github.vaibhavsinha.kong.model.plugin.authentication.key.KeyAuthCredential;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import java.io.IOException;
 
@@ -19,7 +19,7 @@ public class KeyAuthServiceImpl implements KeyAuthService {
     public KeyAuthServiceImpl(String adminUrl) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(adminUrl)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(JacksonConverterFactory.create())
                 .build();
         retrofitKeyAuthService = retrofit.create(RetrofitKeyAuthService.class);
     }

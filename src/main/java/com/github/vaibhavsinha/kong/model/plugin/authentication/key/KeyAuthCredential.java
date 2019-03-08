@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.key;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,13 +11,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class KeyAuthCredential {
 
-    @SerializedName("id")
+    @JsonProperty("id")
     private String id;
-    @SerializedName("key")
+    @JsonProperty("key")
     private String key;
-    @SerializedName("consumer_id")
+    @JsonProperty("consumer_id")
     private String consumerId;
-    @SerializedName("created_at")
+    @JsonProperty("created_at")
     private Long createdAt;
 
     public KeyAuthCredential(String key) {

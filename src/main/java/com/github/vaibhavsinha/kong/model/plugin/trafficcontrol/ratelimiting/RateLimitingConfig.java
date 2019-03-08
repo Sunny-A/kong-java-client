@@ -1,6 +1,7 @@
 package com.github.vaibhavsinha.kong.model.plugin.trafficcontrol.ratelimiting;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Data;
 
 /**
@@ -9,33 +10,33 @@ import lombok.Data;
 @Data
 public class RateLimitingConfig {
 
-    @SerializedName("second")
+    @JsonProperty("second")
     Integer second;
-    @SerializedName("minute")
+    @JsonProperty("minute")
     Integer minute;
-    @SerializedName("hour")
+    @JsonProperty("hour")
     Integer hour;
-    @SerializedName("day")
+    @JsonProperty("day")
     Integer day;
-    @SerializedName("month")
+    @JsonProperty("month")
     Integer month;
-    @SerializedName("year")
+    @JsonProperty("year")
     Integer year;
-    @SerializedName("limit_by")
+    @JsonProperty("limit_by")
     LimitBy limitBy;
-    @SerializedName("policy")
+    @JsonProperty("policy")
     Policy policy;
-    @SerializedName("fault_tolerant")
+    @JsonProperty("fault_tolerant")
     Boolean faultTolerant;
-    @SerializedName("redis_host")
+    @JsonProperty("redis_host")
     String redisHost;
-    @SerializedName("redis_port")
+    @JsonProperty("redis_port")
     Integer redisPort;
-    @SerializedName("redis_password")
+    @JsonProperty("redis_password")
     String redisPassword;
-    @SerializedName("redis_timeout")
+    @JsonProperty("redis_timeout")
     Integer redisTimeout;
-    @SerializedName("redis_database")
+    @JsonProperty("redis_database")
     Integer redisDatabase;
 
     public enum Policy {

@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.oauth2;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -9,22 +9,22 @@ import lombok.Data;
 @Data
 public class Authorization {
 
-    @SerializedName("id")
+    @JsonProperty("id")
     private String id;
-    @SerializedName("client_id")
+    @JsonProperty("client_id")
     private String clientId;
-    @SerializedName("response_type")
+    @JsonProperty("response_type")
     private String responseType;
-    @SerializedName("created_at")
+    @JsonProperty("created_at")
     private Long createdAt;
-    @SerializedName("provision_key")
+    @JsonProperty("provision_key")
     private String provisionKey;
-    @SerializedName("scope")
+    @JsonProperty("scope")
     private String scope;
-    @SerializedName("authenticated_userid")
+    @JsonProperty("authenticated_userid")
     private String authenticatedUserid;
-    @SerializedName("username")
+    @JsonProperty("username")
     private String username;
-    @SerializedName("password")
+    @JsonProperty("password")
     private String password;
 }

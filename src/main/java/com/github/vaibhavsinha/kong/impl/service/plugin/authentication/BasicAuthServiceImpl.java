@@ -5,7 +5,7 @@ import com.github.vaibhavsinha.kong.exception.KongClientException;
 import com.github.vaibhavsinha.kong.internal.plugin.authentication.RetrofitBasicAuthService;
 import com.github.vaibhavsinha.kong.model.plugin.authentication.basic.BasicAuthCredential;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import java.io.IOException;
 
@@ -19,7 +19,7 @@ public class BasicAuthServiceImpl implements BasicAuthService {
     public BasicAuthServiceImpl(String adminUrl) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(adminUrl)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(JacksonConverterFactory.create())
                 .build();
         retrofitBasicAuthService = retrofit.create(RetrofitBasicAuthService.class);
     }

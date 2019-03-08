@@ -1,6 +1,6 @@
 package com.github.vaibhavsinha.kong.model.admin.plugin;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.Map;
@@ -10,18 +10,18 @@ import java.util.Map;
  */
 @Data
 public class Plugin {
-    @SerializedName("id")
+    @JsonProperty("id")
     private String id;
-    @SerializedName("api_id")
+    @JsonProperty("api_id")
     private String apiId;
-    @SerializedName("consumer_id")
+    @JsonProperty("consumer_id")
     private String consumerId;
-    @SerializedName("name")
+    @JsonProperty("name")
     private String name;
-    @SerializedName("config")
+    @JsonProperty("config")
     private Object config;
-    @SerializedName("enabled")
+    @JsonProperty("enabled")
     private Boolean enabled;
-    @SerializedName("created_at")
+    @JsonProperty("created_at")
     private Long createdAt;
 }
